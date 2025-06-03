@@ -26,6 +26,10 @@ function allBtnHandler(id, value, navPrice, amount) {
 }
 
 
+function setTime() {
+    const date = new Date();
+    return date;
+}
 
 
 
