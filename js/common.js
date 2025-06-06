@@ -25,13 +25,39 @@ function allBtnHandler(id, value, navPrice, amount) {
     })
 }
 
+function historyToggle(donation,history,article,section) {
+    // //button background color toggle
+    const donationBtn = document.getElementById(donation);
+    const historyBtn = document.getElementById(history);
+    donationBtn.classList.remove("button-color");
+    historyBtn.classList.add("button-color");
+
+    //button toggle
+    const donationContainer = document.getElementById(article);
+    const historyContainer = document.getElementById(section);
+    donationContainer.classList.add("hidden");
+    historyContainer.classList.remove("hidden");
+}
+
+
+function donationToggle(history, donation, section,article) {
+    // //button background color toggle
+    const historyBtn = document.getElementById(history);
+    const donationBtn = document.getElementById(donation);
+    historyBtn.classList.remove("button-color");
+    donationBtn.classList.add("button-color");
+
+    //button toggle
+    const historyContainer = document.getElementById(section);
+    const donationContainer = document.getElementById(article);
+    historyContainer.classList.add("hidden");
+    donationContainer.classList.remove("hidden");
+}
 
 function setTime() {
     const date = new Date();
     return date;
 }
-
-
 
 function setParseIntValue(id) {
     const parseIntValue = document.getElementById(id).innerText;
